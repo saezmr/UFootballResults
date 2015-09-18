@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=uFootballResults
+Exec=qmlscene $@ Main.qml
+Icon=uFootballResults.png
+Terminal=false
+Type=Application
+X-Ubuntu-Touch=true
+

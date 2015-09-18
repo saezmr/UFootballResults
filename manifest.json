@@ -1,0 +1,15 @@
+{
+    "name": "ufootballresults.andprsoft",
+    "description": "Football Results, it's now only spanish first and second division.",
+    "architecture": "all",
+    "title": "uFootballResults",
+    "hooks": {
+        "uFootballResults": {
+            "apparmor": "uFootballResults.apparmor",
+            "desktop": "uFootballResultsl.desktop"
+        }
+    },
+    "version": "0.1",
+    "maintainer": "Ricardo Sáez <andprsoft@gmail.com>",
+    "framework": "ubuntu-sdk-15.04"
+}
