@@ -96,7 +96,7 @@ Page {
             for (var i = 0; i < messageObject.matches.length; i++) {
                 var match= messageObject.matches[i];
                 console.log(match.date);
-               addResult(match.div, match.date, match.homeTeam, match.awayTeam, match.fthg, match.ftag, match.ftr);
+                addResult(match.div, match.date, match.homeTeam, match.awayTeam, match.fthg, match.ftag, match.ftr);
             }
         }
     }

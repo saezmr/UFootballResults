@@ -11,7 +11,7 @@ MainView {
     objectName: "mainView"
 
     // Note! applicationName needs to match the "name" field of the click manifest
-    applicationName: "uresultadosfutbol.andprsoft"
+    applicationName: "ufootballresults.andprsoft"
 
     /*
      This property enables the application to change orientation
@@ -157,8 +157,8 @@ MainView {
     function resultExistsBBVA(league, date, homeTeam, awayTeam){
         var existe = false;
         var index = 0;
-        while (typeof resultsBBVAModel.get(index).docId !== "undefined"){
-            var sResult = JSON.stringify(resultsBBVAModel.get(index));
+        while (typeof resultsBBVAModelSinOrden.get(index).docId !== "undefined"){
+            var sResult = JSON.stringify(resultsBBVAModelSinOrden.get(index));
             var result= JSON.parse(sResult);
             console.debug(result.contents.league+" == "+league+" && "+result.contents.date+" == "+date+" && "+result.contents.homeTeam+" == "+homeTeam+" && "+result.contents.awayTeam+" == "+awayTeam);
             if (typeof result.contents === "undefined"){
@@ -176,8 +176,8 @@ MainView {
     function resultExistsAdelante(league, date, homeTeam, awayTeam){
         var existe = false;
         var index = 0;
-        while (typeof resultsAdelanteModel.get(index).docId !== "undefined"){
-            var sResult = JSON.stringify(resultsAdelanteModel.get(index));
+        while (typeof resultsAdelanteModelSinOrden.get(index).docId !== "undefined"){
+            var sResult = JSON.stringify(resultsAdelanteModelSinOrden.get(index));
             var result= JSON.parse(sResult);
             console.debug(result.contents.league+" == "+league+" && "+result.contents.date+" == "+date+" && "+result.contents.homeTeam+" == "+homeTeam+" && "+result.contents.awayTeam+" == "+awayTeam);
             if (typeof result.contents === "undefined"){

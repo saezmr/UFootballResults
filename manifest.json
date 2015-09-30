@@ -6,7 +6,7 @@
     "hooks": {
         "uFootballResults": {
             "apparmor": "uFootballResults.apparmor",
-            "desktop": "uFootballResultsl.desktop"
+            "desktop": "uFootballResults.desktop"
         }
     },
     "version": "0.1",

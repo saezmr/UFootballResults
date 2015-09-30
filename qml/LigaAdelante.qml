@@ -38,7 +38,7 @@ Page {
             id: reloadAction
             iconName: "reload"
             text: "reload"
-            onTriggered: readCSV.sendMessage({"url":"http://www.football-data.co.uk/mmz4281/1516/SP1.csv"});
+            onTriggered: readCSV.sendMessage({"url":"http://www.football-data.co.uk/mmz4281/1516/SP2.csv"});
         }
     ]
 
@@ -96,12 +96,7 @@ Page {
             for (var i = 0; i < messageObject.matches.length; i++) {
                 var match= messageObject.matches[i];
                 console.log(match.date);
-                adelanteModel.append({"date": match.date,
-                                              "homeTeam":match.homeTeam,
-                                              "awayTeam": match.awayTeam,
-                                              "fthg":match.fthg,
-                                              "ftag":match.ftag });
-               addResult(match.div, match.date, match.homeTeam, match.awayTeam, match.fthg, match.ftag, match.ftr);
+                addResult(match.div, match.date, match.homeTeam, match.awayTeam, match.fthg, match.ftag, match.ftr);
             }
         }
     }
