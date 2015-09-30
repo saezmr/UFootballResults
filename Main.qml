@@ -136,7 +136,7 @@ MainView {
 
     function addResult(league, date, homeTeam, awayTeam, fthg, ftag, ftr){
         console.log(league+", "+date+", "+homeTeam+", "+awayTeam+", "+fthg+", "+ftag+", "+ftr);
-        if (!resultExists(league, date, homeTeam, awayTeam)){
+        if (validate(league, date, homeTeam, awayTeam, fthg, ftag, ftr) && !resultExists(league, date, homeTeam, awayTeam)){
             resultadosFutbolDB.putDoc({"result": {"league":league,"date":date,"homeTeam":homeTeam,"awayTeam":awayTeam,"fthg":fthg,"ftag":ftag,"ftr":ftr}});
             console.debug("añadido!!");
         } else {
@@ -145,6 +145,18 @@ MainView {
 
         return true;
     }
+	
+	/**
+	* Valida si es un resultado valido para persistir
+	* Actualmente solo valida que haya goles
+	*/
+	function validate(league, date, homeTeam, awayTeam, fthg, ftag, ftr){
+		if (isNaN(fthg) || isNaN(ftag)){
+			return false;
+		} else {
+			return true;
+		}
+	}
 
     function resultExists(league, date, homeTeam, awayTeam){
         if (resultExistsAdelante(league, date, homeTeam, awayTeam) || resultExistsBBVA(league, date, homeTeam, awayTeam)){
